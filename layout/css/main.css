@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../Poppins/Poppins-Black.ttf");
+  src: url("../Poppins/Poppins-BlackItalic.ttf");
+  src: url("../Poppins/Poppins-Bold.ttf");
+  src: url("../Poppins/Poppins-BoldItalic.ttf");
+  src: url("../Poppins/Poppins-ExtraBold.ttf");
+  src: url("../Poppins/Poppins-ExtraBoldItalic.ttf");
+  src: url("../Poppins/Poppins-ExtraLight.ttf");
+  src: url("../Poppins/Poppins-ExtraLightItalic.ttf");
+  src: url("../Poppins/Poppins-Italic.ttf");
+  src: url("../Poppins/Poppins-Light.ttf");
+  src: url("../Poppins/Poppins-LightItalic.ttf");
+  src: url("../Poppins/Poppins-Medium.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  background-color: #fcfcfc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+  color: #555;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+.quiz-app {
+  width: 700px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.quiz-app .quiz-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+}
+.quiz-app .quiz-info div {
+  font-size: 14px;
+}
+.quiz-app .quiz-info span {
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #0077ff;
+  color: #fff;
+  padding: 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 5px;
+}
+
+.quiz-app .question {
+  margin-top: 15px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.quiz-app .question h2{
+  color: #333;
+}
+.quiz-app .answer-content {
+  margin: 10px 0 15px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.quiz-app .answer-content .answer {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.quiz-app .answer-content .answer:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.quiz-app .answer-content .answer input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  margin-right: 5px;
+}
+
+.quiz-app .answer-content .answer label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+.quiz-app .answer-content .answer input[type="radio"]:checked + label {
+  color: #0077ff;
+}
+
+.btn {
+  text-align: center;
+}
+.quiz-app button {
+  width: 50%;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: capitalize;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.bullets {
+  margin-top: 20px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.bullets .spans {
+  display: flex;
+}
+.bullets .spans span {
+  width: 15px;
+  height: 15px;
+  background-color: #eeeded;
+  margin-right: 2px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.bullets .spans span.on{
+  background-color: #0077ff;
+}
+
+.bullets .countdown{
+  font-size: 14px;
+  font-weight: 600;
+}
+.result{
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+.result span{
+  margin-right: 2px;
+  font-weight: 600;
+}
+.result p{
+  color: #444;
+}
+
+@media (max-width:767px) {
+  .quiz-app{
+    width: 350px;
+  }
+  .quiz-app .quiz-info div{
+    font-size: 12px;
+  }
+  .quiz-app .quiz-info span{
+    font-size: 12px;
+  }
+  .quiz-app .question h2{
+    font-size: 16px;
+  }
+.quiz-app .answer-content .answer label {
+    font-size: 12px;
+  }
+  .bullets .spans span{
+    width: 10px;
+    height: 10px;
+  }
+  .quiz-app .countdown{
+    font-size: 12px;
+  }
+  
+}
